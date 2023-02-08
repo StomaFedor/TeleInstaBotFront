@@ -1,0 +1,12 @@
+version: '3.2'
+
+services:
+  frontend: # rest api
+    image: Practice/2022/TeleInsta/TeleInstaFrontend:latest
+    container_name: frontend
+    restart: always
+    networks:
+      my-network:
+
+networks:
+  my-network:

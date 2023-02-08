@@ -1,0 +1,19 @@
+<h1>
+    {{timer}}
+    {{clickTimer}}
+</h1>
+<div class="buttons">
+    <div class="button-left">
+        <button (click) = "clickEvent('left')">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">undo</mat-icon>
+        </button>
+    </div>
+    <div class="button-right">
+        <button *ngIf="!admin" (click) = "clickEvent('right')">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">redo</mat-icon>
+        </button>
+        <button *ngIf="admin" routerLink="/adminPanel">
+            <mat-icon aria-hidden="false" aria-label="Example home icon">redo</mat-icon>
+        </button>
+    </div>
+</div>

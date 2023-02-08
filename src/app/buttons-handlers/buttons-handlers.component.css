@@ -1,0 +1,76 @@
+ * {
+    --buttons-sizes: 80px;
+    --buttons-font-size: 25px;
+    --buttons-margin: 40px;
+ }
+
+ 
+.buttons button{
+    width: var(--buttons-sizes);
+    height: var(--buttons-sizes);
+    border-radius: 100%;
+    opacity: 0.3;
+}
+
+.buttons button:hover{
+    opacity: 1;
+}
+
+.buttons button:active{
+    box-shadow: 1px 1px 1px black;
+}
+
+.buttons {
+    position: fixed;
+    top: 85%;
+    left: 0px;
+    right: 0px;
+    font-size: var(--buttons-font-size);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.button-left img {
+    transform: rotate(90deg);
+}
+
+.button-right img {
+    transform: rotate(-90deg);
+}
+
+.admin-button {
+    float: right !important;
+    display: flex;
+}
+.button-left {
+    float: left;
+    margin-left: var(--buttons-margin);
+}
+
+.button-right {
+    float: right;
+    margin-right: var(--buttons-margin);
+}
+
+@media (max-width: 600px) {
+    * {
+        --buttons-sizes: 60px;
+        --buttons-font-size: 15px;
+        --buttons-margin: 30px;
+    }
+}
+
+@media (max-width: 350px) {
+    * {
+        --buttons-sizes: 55px;
+        --buttons-font-size: 15px;
+        --buttons-margin: 25px;
+    }
+}
+
+@media (max-width: 300px) {
+    * {
+        --buttons-sizes: 50px;
+        --buttons-font-size: 10px;
+    }
+}

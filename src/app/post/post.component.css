@@ -1,0 +1,239 @@
+* {
+    --post-max-width: 710px;
+    --post-margins: auto;
+
+    --avatar-sizes: 60px;
+
+    --nickname-size: 22px;
+    --address-size: 20px; 
+    --description-size: 18px;
+
+    --link-font-size: 18px;
+}
+
+.posts{
+    max-width: var(--post-max-width);
+    margin: 0 var(--post-margins);
+}
+
+#menuButton {
+    float: right;
+}
+
+.post-container {
+    background-color: var(--tg-theme-bg-color);
+    border-radius: 10px;
+    border: 1px solid var(--tg-theme-button-color);
+    width: 100%;
+
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+div .post-header {
+    display: inline-block;
+    padding: 10px 0 15px 0;
+    width: 100%;
+    height: auto;    
+}
+
+#avatar {
+    width: var(--avatar-sizes);
+    height: var(--avatar-sizes);
+    margin-left: 20px;
+    float: left;
+    border-radius: 100%;
+}
+
+.post-header-data {
+    position: relative;
+    float: left;
+    margin-left: 10px;
+}
+
+.post-header-data p {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+    font-style: normal;
+}
+
+#nickname {
+    color: var(--tg-theme-text-color);
+    font-size: var(--nickname-size);
+    font-weight: 1000;
+}
+
+#address, #date {
+    color: var(--tg-theme-hint-color);
+    font-size: var(--address-size);
+    float: bottom;
+}
+
+#like,  #description {
+    font-size: var(--description-size);
+    color: var(--tg-theme-text-color);
+}
+
+.post-body{
+    position: relative;
+}
+
+::ng-deep .carousel-slide-content{
+    z-index: 0 !important;
+}
+
+.post-body img {
+    z-index: -1000;
+    width: 100%;
+    min-height: 100%;
+}
+
+.video-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(45, 43, 43);
+}
+
+.video-content  p {
+    width: 70%;
+    height: fit-content;
+    margin: auto;
+    text-align: center;
+    font-size: var(--nickname-size);
+    color: white;
+}
+
+#link-to-instagram {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 10px;
+    background-color: white;
+    opacity: 0.5;
+    border: none;
+    color: var(--tg-theme-link-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--link-font-size);
+    cursor: pointer;
+    border-radius: 100%;
+    box-shadow:inset 1px -1px 1px gray;
+}
+
+#link-to-instagram:hover{
+    opacity: 0.9;
+}
+
+#link-to-instagram:active{
+    bottom: 9px;
+    right: 9px;
+    box-shadow:inset 0px 0px 0px;
+}
+
+.post-footer {
+    display: block;
+    position: relative;
+    padding: 10px 20px 5px 20px;
+    font-size: 14px;
+}
+
+.post-footer p {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+#description {
+    max-width: 100%;
+}
+
+#description  span, #like 
+{
+    font-weight: 1000;
+}
+
+@media (max-width: 750px) {
+    * {
+        --post-margins: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    * {
+        --avatar-sizes: 55px;
+        --nickname-size: 21px;
+        --address-size: 19px; 
+        --description-size: 17px;
+        --link-font-size: 16px;
+    }
+}
+
+@media (max-width: 550px) {
+    * {
+        --avatar-sizes: 50px;
+        --nickname-size: 20px;
+        --address-size: 18px; 
+        --description-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    * {
+        --avatar-sizes: 45px;
+        --nickname-size: 19px;
+        --address-size: 17px; 
+        --description-size: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    * {
+        --avatar-sizes: 40px;
+        --nickname-size: 18px;
+        --address-size: 16px; 
+        --description-size: 14px;
+        --link-font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    * {
+        --avatar-sizes: 35px;
+        --nickname-size: 18px;
+        --address-size: 16px; 
+        --description-size: 14px;
+        --link-font-size: 12px;
+    }
+}
+
+@media (max-width: 350px) {
+    * {
+        --nickname-size: 16px;
+        --address-size: 15px; 
+        --description-size: 12px;
+        --link-font-size: 10px;
+    }    
+}
+
+@media (max-width: 320px) {
+    * {
+        --avatar-sizes: 25px;
+        --nickname-size: 14px;
+        --address-size: 12px; 
+        --description-size: 10px;
+        --link-font-size: 9px;
+    }    
+}
+
+@media (max-width: 300px) {
+    * {
+        --avatar-sizes: 25px;
+        --nickname-size: 12px;
+        --address-size: 10px; 
+        --description-size: 9px;
+        --link-font-size: 8px;
+    }    
+}

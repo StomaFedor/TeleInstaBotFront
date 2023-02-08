@@ -1,0 +1,48 @@
+* {
+    --post-max-width: 710px;
+    --post-margins: auto;
+
+    --avatar-sizes: 60px;
+
+    --nickname-size: 22px;
+    --address-size: 20px; 
+    --description-size: 18px;
+
+    --link-font-size: 18px;
+}
+
+.inputAdmin {
+    max-width: var(--post-max-width);
+    margin: 0 var(--post-margins);
+    margin-top: 40%;
+
+    background-color: var(--tg-theme-bg-color);
+    border-radius: 10px;
+    border: 1px solid var(--tg-theme-button-color);
+    width: 100%;
+
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.pass {
+    color: var(--tg-theme-text-color);
+}
+
+#loginText, #passwordText, #enterButton, p {
+    color: var(--tg-theme-text-color);
+}
+
+p {
+    margin-left: 45%;
+}
+
+h1 {
+    color: #FA8072;
+    margin-left: 20%;
+}
+
+#development {
+    color: red;
+    margin-left: 4%;
+}

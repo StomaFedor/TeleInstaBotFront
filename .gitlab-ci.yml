@@ -1,0 +1,33 @@
+stages:
+  - build
+
+variables:
+  BACKEND_IMAGE_NAME: Practice/2022/TeleInsta/Frontend:latest
+  DOCKER_HOST: tcp://localhost:2375/
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  DEPLOY_FOLDER: TeleInstBot/
+
+services:
+  - name: docker:19.03.12-dind
+    entrypoint: ["env", "-u", "DOCKER_HOST"]
+    command: ["dockerd-entrypoint.sh"]
+
+build-frotend:
+  stage: build
+  image: node:16.16.0
+  tags:
+    - docker
+  script:
+    - npm install -g @angular/cli@9.1.0
+    - npm install --force
+    - ng build 
+  artifacts:
+    expire_in: 1 day
+    when: on_success
+    paths:
+      - dist/
+  cache:
+    paths:
+      - node_modules/  
+  
